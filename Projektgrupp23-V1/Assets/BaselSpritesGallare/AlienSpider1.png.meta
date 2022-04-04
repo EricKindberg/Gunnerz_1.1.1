@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 95f504056abef9b4a81921a9d02f9b93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3777762487211200460
+    second: AlienSpider1_LeftLeg1
+  - first:
+      213: 7582140065924808012
+    second: AlienSpider1_LeftLeg2
+  - first:
+      213: -5909280355620262916
+    second: AlienSpider1_LeftLeg3
+  - first:
+      213: 6593082777602056826
+    second: AlienSpider1_RightLeg1
+  - first:
+      213: 8841414307875252592
+    second: AlienSpider1_RightLeg2
+  - first:
+      213: -2187860675653938030
+    second: AlienSpider1_RightLeg3
+  - first:
+      213: 8122627013204949539
+    second: AlienSpider1_Body
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AlienSpider1_LeftLeg1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 389
+        width: 142
+        height: 104
+      alignment: 9
+      pivot: {x: 0.77442276, y: 0.17165287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430faf78801b29bc0800000000000000
+      internalID: -3777762487211200460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_LeftLeg2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 234
+        width: 150
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8514521, y: 0.4465889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d74b2d73c293960800000000000000
+      internalID: 7582140065924808012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_LeftLeg3
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 40
+        width: 120
+        height: 108
+      alignment: 9
+      pivot: {x: 0.81780255, y: 0.8634997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb6f0543d40efda0800000000000000
+      internalID: -5909280355620262916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_RightLeg1
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 379
+        width: 128
+        height: 115
+      alignment: 9
+      pivot: {x: 0.20206022, y: 0.28542295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7267b5cad55f7b50800000000000000
+      internalID: 6593082777602056826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_RightLeg2
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 254
+        width: 142
+        height: 62
+      alignment: 9
+      pivot: {x: 0.1445463, y: 0.500001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079e5fc187303ba70800000000000000
+      internalID: 8841414307875252592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_RightLeg3
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 49
+        width: 118
+        height: 121
+      alignment: 9
+      pivot: {x: 0.25285572, y: 0.81517607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294d999ae4823a1e0800000000000000
+      internalID: -2187860675653938030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienSpider1_Body
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 361
+        width: 176
+        height: 253
+      alignment: 9
+      pivot: {x: 0.4936272, y: 0.1275929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab215ab3e59b070800000000000000
+      internalID: 8122627013204949539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: ad3ee988c5989364e909e586311842dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6082398604019026968
+    second: AlienPack2_LeftLeg2
+  - first:
+      213: -2452127818524004608
+    second: AlienPack2_LeftLeg3
+  - first:
+      213: -8258812084297307293
+    second: AlienPack2_RightLeg1
+  - first:
+      213: -2867142310550032259
+    second: AlienPack2_RightLeg2
+  - first:
+      213: -3696560552165404768
+    second: AlienPack2_RightLeg3
+  - first:
+      213: 4145127090217139358
+    second: AlienPack2_Body
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AlienPack2_LeftClaw
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 631
+        width: 182
+        height: 187
+      alignment: 9
+      pivot: {x: 0.7523156, y: 0.17768998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b83282b30308190800000000000000
+      internalID: -7962311110556415180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_RightClaw
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 661
+        width: 176
+        height: 175
+      alignment: 9
+      pivot: {x: 0.2716973, y: 0.12278774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9ac488c454e9590800000000000000
+      internalID: -7665613320731448880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_LeftLeg1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 406
+        width: 187
+        height: 103
+      alignment: 9
+      pivot: {x: 0.9067241, y: 0.55572957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3fedb02e4413130800000000000000
+      internalID: 3544690119369749467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_LeftLeg2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 224
+        width: 208
+        height: 109
+      alignment: 9
+      pivot: {x: 0.87945896, y: 0.68431777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e33d1112baf69ba0800000000000000
+      internalID: -6082398604019026968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_LeftLeg3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 43
+        width: 192
+        height: 112
+      alignment: 9
+      pivot: {x: 0.8961322, y: 0.7434452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fe501bdba48fdd0800000000000000
+      internalID: -2452127818524004608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_RightLeg1
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 405
+        width: 173
+        height: 107
+      alignment: 9
+      pivot: {x: 0.13501717, y: 0.5938815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b61c89a2ec26d80800000000000000
+      internalID: -8258812084297307293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_RightLeg2
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 229
+        width: 186
+        height: 110
+      alignment: 9
+      pivot: {x: 0.15281136, y: 0.6695959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d703c23624dd538d0800000000000000
+      internalID: -2867142310550032259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_RightLeg3
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 59
+        width: 172
+        height: 117
+      alignment: 9
+      pivot: {x: 0.15792492, y: 0.7453072}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af857553cd23bcc0800000000000000
+      internalID: -3696560552165404768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlienPack2_Body
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 534
+        width: 340
+        height: 284
+      alignment: 9
+      pivot: {x: 0.5084413, y: 0.25745705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cbd317023768930800000000000000
+      internalID: 4145127090217139358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

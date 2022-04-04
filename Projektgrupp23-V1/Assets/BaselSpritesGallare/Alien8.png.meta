@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 2a35fef6f7c2a5344b7a835a44c71484
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4958964107964416440
+    second: Alien8_Head
+  - first:
+      213: -1106697721963502676
+    second: Alien8_Body
+  - first:
+      213: -1311121853908040030
+    second: Alien8_LeftLeg1
+  - first:
+      213: -7085201392020021677
+    second: Alien8_LeftLeg2
+  - first:
+      213: -8397509687376108819
+    second: Alien8_LeftLeg3
+  - first:
+      213: -3775110300829597663
+    second: Alien8_RightLeg1
+  - first:
+      213: 8221015187495909614
+    second: Alien8_RightLeg2
+  - first:
+      213: -4518869363698683623
+    second: Alien8_RightLeg3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Alien8_Head
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 814
+        width: 186
+        height: 169
+      alignment: 9
+      pivot: {x: 0.49097615, y: 0.4503423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e7ed2ea683e2bb0800000000000000
+      internalID: -4958964107964416440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_Body
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 560
+        width: 237
+        height: 199
+      alignment: 9
+      pivot: {x: 0.49999988, y: 0.23853797}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3a1a0194834a0f0800000000000000
+      internalID: -1106697721963502676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_LeftLeg1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 407
+        width: 116
+        height: 107
+      alignment: 9
+      pivot: {x: 0.7459744, y: 0.73529166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a64f88de95fdcde0800000000000000
+      internalID: -1311121853908040030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_LeftLeg2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 279
+        width: 136
+        height: 74
+      alignment: 9
+      pivot: {x: 0.8085322, y: 0.47731802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e1b8a7fde4cad90800000000000000
+      internalID: -7085201392020021677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_LeftLeg3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 83
+        width: 109
+        height: 111
+      alignment: 9
+      pivot: {x: 0.7001781, y: 0.22782438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2ab066e6d067b80800000000000000
+      internalID: -8397509687376108819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_RightLeg1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 394
+        width: 126
+        height: 112
+      alignment: 9
+      pivot: {x: 0.2602263, y: 0.6948155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120422bce2d1c9bc0800000000000000
+      internalID: -3775110300829597663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_RightLeg2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 261
+        width: 139
+        height: 62
+      alignment: 9
+      pivot: {x: 0.21020135, y: 0.39171478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8f8c791c9e61270800000000000000
+      internalID: 8221015187495909614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alien8_RightLeg3
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 61
+        width: 112
+        height: 109
+      alignment: 9
+      pivot: {x: 0.29019764, y: 0.20743155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91138567140c941c0800000000000000
+      internalID: -4518869363698683623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
