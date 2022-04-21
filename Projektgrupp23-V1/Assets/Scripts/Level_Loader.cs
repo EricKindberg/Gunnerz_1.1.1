@@ -15,9 +15,36 @@ public class Level_Loader : MonoBehaviour
         activeSceenIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
+    private void Update()
+    {
+        if(activeSceenIndex != 0)
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0;
+                Transform pauceMenu = FindObjectOfType<PauceMenu>().transform;
+                foreach(Transform child in pauceMenu)
+                {
+                    child.gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        Transform pauceMenu = FindObjectOfType<PauceMenu>().transform;
+        foreach (Transform child in pauceMenu)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
     public void LoadMainMenu()
     {
         Debug.Log("Load main menu");
+        Time.timeScale = 1;
         SceneManager.LoadScene("Main Menu");
     }
 

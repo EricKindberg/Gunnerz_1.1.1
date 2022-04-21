@@ -41,6 +41,8 @@ public class Fire_main_weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // TODO: Move the button listner event to a seperate player fire script. 
+        // The logic which handles the fire event should still remains here!
         if (Input.GetButtonDown("Fire1"))
         {
             
@@ -54,21 +56,19 @@ public class Fire_main_weapon : MonoBehaviour
             
 
         }
+
+        /*
+        Så som koden är skriven kan spelaren överstiga rateOfFire om
+        de klickar snabbaren. För att undvika detta möste perioden mellan
+        varje skottlosning att sparas. Om tiden mellan den senaste och nya 
+        skottlossningen är kortare än skjuthastighet bör  
+        skottlossningen förhindras.
+         */
     }
 
     void AnimateMuzzleFlash()
     {
         muzzelFlashSCR.ResetAnimation();
-
-        /*
-        Quaternion fireRotation = firePoint.rotation * Quaternion.Euler(-180, 90, -90);
-        //Vector3 muzzelFlashPos = firePoint.position;
-        //GameObject flash = Instantiate(muzzleFlashePrefab, muzzelFlashPos, fireRotation, firePoint);
-        //flash.transform.position += new Vector3(0.612f, 0.268f, 0f);
-        //GameObject flash = Instantiate(muzzleFlashePrefab, muzzelFlashPos.position, fireRotation, firePoint.transform);
-        GameObject flash = Instantiate(muzzleFlashePrefab, firePoint);
-        */
-        //GameObject flash = Instantiate(muzzleFlashePrefab, firePoint);
     }
 
     IEnumerator Fire()
@@ -87,41 +87,27 @@ public class Fire_main_weapon : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.up);
             if (hitInfo)
             {
-                Enemy enemy = hitInfo.transform.gameObject.GetComponent<Enemy>();
-                if (enemy != null)
+                if (hitInfo.transform.gameObject.tag == "Enemy")
                 {
-                    enemy.HandleDamage(WeaponDamage);
+                    hitInfo.transform.gameObject.GetComponent<EnemyHealth>().TakingDamage(WeaponDamage);
+                    //enemy.HandleDamage(bulletDamage);
                 }
 
-                /*
-                Debug.Log("Firepoint Pos: " + firePoint.position);
-                Debug.Log("MousePos : " + mouseMag);
-                Debug.Log("firePoint.position + firePoint.up * hitInfo.distance: " + firePoint.position + firePoint.up * hitInfo.distance);
-                Debug.Log("firePoint.position + firePoint.up * distance: " + firePoint.position + firePoint.up * distance);
-                */
-                /*
-                lineRenderer.SetPosition(0, firePoint.position);
-                lineRenderer.SetPosition(1, firePoint.position + firePoint.up * hitInfo.distance);
-                */
+                // Bullet trail
                 lineRenderer.SetPosition(0, firePoint.position);
                 lineRenderer.SetPosition(1, firePoint.position + firePoint.up * hitInfo.distance);
 
             }
             else
             {
-                /*
-                lineRenderer.SetPosition(0, firePoint.position);
-                //lineRenderer.SetPosition(1, firePoint.position + firePoint.right * 100);
-                lineRenderer.SetPosition(1, cam.ScreenToWorldPoint(Input.mousePosition));
-                */
+                // Prevents the bullet trail from going to far when not hitting anything
                 lineRenderer.SetPosition(0, firePoint.position);
                 lineRenderer.SetPosition(1, cam.ScreenToWorldPoint(Input.mousePosition));
             }
 
-            //lineRenderer.enabled = true;
 
             yield return new WaitForSeconds(rateOfFire);
-            // wait one frame
+            // wait rateOfFire between loop
 
         }
     }

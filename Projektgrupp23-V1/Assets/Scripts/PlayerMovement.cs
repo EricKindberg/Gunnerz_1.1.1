@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float moveSpeed = 5f;
+    [Range(2f, 20f)] public float moveSpeed = 5f;
     [Range(2.5f,6.5f)] public float rotationOffset = 5f;
     
     public Rigidbody2D rb;

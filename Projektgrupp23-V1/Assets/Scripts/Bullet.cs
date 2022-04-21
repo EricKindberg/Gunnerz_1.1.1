@@ -14,10 +14,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-        if(enemy != null)
+        //Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        
+        if(collision.gameObject.tag == "Enemy")
         {
-            enemy.HandleDamage(bulletDamage);
+            collision.gameObject.GetComponent<EnemyHealth>().TakingDamage(bulletDamage);
+            //enemy.HandleDamage(bulletDamage);
         }
 
         Destroy(gameObject);

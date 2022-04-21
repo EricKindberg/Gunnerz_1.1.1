@@ -6,6 +6,7 @@ public class Fire_side_weapon : MonoBehaviour
 {
     public Transform firePoint;
     public Camera cam;
+    public AudioSource shootSound;
 
     //public GameObject muzzleFlashePrefab;
     //public Transform muzzelFlashPos;
@@ -46,6 +47,7 @@ public class Fire_side_weapon : MonoBehaviour
             //muzzleFlash();
             Fire();
             firingCoroutine = StartCoroutine(Fire());
+            
         }
         if (Input.GetButtonUp("Fire2"))
         {
@@ -83,6 +85,12 @@ public class Fire_side_weapon : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
 
+
+            if (shootSound != null)
+            {
+                shootSound.Play();
+
+            }
             //lineRenderer.enabled = true;
 
             yield return new WaitForSeconds(rateOfFire);
