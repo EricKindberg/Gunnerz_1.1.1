@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -232,6 +233,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Alien6_BodyPart2: 3571199668299577157
+      Alien6_BodyPart1: -942549076352905973
+      Alien6_BodyPart3: 2841075568016995208
+      Alien6_Ass: 8057801863569307380
+      Alien6_Head: -3694772664739564597
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

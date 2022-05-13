@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -319,6 +320,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      AlienPack2_LeftLeg3: -2452127818524004608
+      AlienPack2_RightLeg2: -2867142310550032259
+      AlienPack2_RightLeg1: -8258812084297307293
+      AlienPack2_LeftLeg2: -6082398604019026968
+      AlienPack2_RightLeg3: -3696560552165404768
+      AlienPack2_RightClaw: -7665613320731448880
+      AlienPack2_Body: 4145127090217139358
+      AlienPack2_LeftLeg1: 3544690119369749467
+      AlienPack2_LeftClaw: -7962311110556415180
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

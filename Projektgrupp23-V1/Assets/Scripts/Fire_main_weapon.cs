@@ -6,7 +6,7 @@ public class Fire_main_weapon : MonoBehaviour
 {
     public Transform firePoint;
     public Camera cam;
-
+    private bool isShooting;
     //public GameObject muzzleFlashePrefab;
     //public Transform muzzelFlashPos;
 
@@ -22,12 +22,13 @@ public class Fire_main_weapon : MonoBehaviour
     private GameObject muzzleFlashOBJ;
     private MuzzelFlash muzzelFlashSCR;
     //public Transform muzzelFlashPos;
+    public AudioSource audioSource;
 
     Coroutine firingCoroutine;
 
     private void Start()
     {
-        Debug.Log("What");
+        isShooting = false;
         cam = FindObjectOfType<Camera>();
         //muzzelFlashSCR = muzzleFlashOBJ.GetComponent<MuzzelFlash>();
         //muzzleFlash();
@@ -43,18 +44,22 @@ public class Fire_main_weapon : MonoBehaviour
     {
         // TODO: Move the button listner event to a seperate player fire script. 
         // The logic which handles the fire event should still remains here!
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&&isShooting==false)
         {
-            
+            isShooting = true;
             //muzzleFlash();
             Fire();
             firingCoroutine = StartCoroutine(Fire());
         }
+        else if(Input.GetButtonDown("Fire1") && isShooting == true)
+        {
+            StopCoroutine(firingCoroutine);
+            isShooting = false;
+        }
         if(Input.GetButtonUp("Fire1"))
         {
             StopCoroutine(firingCoroutine);
-            
-
+            isShooting = false;
         }
 
         /*
@@ -74,7 +79,7 @@ public class Fire_main_weapon : MonoBehaviour
     IEnumerator Fire()
     {
         // Fire coroutine was inspired by unity course project "Laser Defender"
-
+        
         while (true)
         {
             GameObject line = Instantiate(bullet_trail_line, firePoint);
@@ -82,6 +87,10 @@ public class Fire_main_weapon : MonoBehaviour
 
             AnimateMuzzleFlash();
 
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
 
             float distance = Vector3.Distance(firePoint.position, Input.mousePosition);
             RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.up);

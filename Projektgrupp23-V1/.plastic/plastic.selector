@@ -1,0 +1,3 @@
+rep "Projektgrupp23-V1@cesarforthomme@cloud"
+  path "/"
+    smartbranch "/main"

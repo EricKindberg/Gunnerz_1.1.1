@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -232,6 +233,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Red_Solider_Medium_LeftHand: 1968932485515897144
+      Red_Solider_Medium_Weaopen: -1916865315582314088
+      Red_Solider_Medium_Torso: -2294584401503848489
+      Red_Solider_Medium_RightHand: 836148047445511141
+      Red_Solider_Medium_Head: 6863588433781367157
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

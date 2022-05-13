@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Solider_Blue_Heavy_Weaopen: -7311973967426047452
+      Solider_Blue_Heavy_Jetback: -5595250836124876777
+      Solider_Blue_Heavy_Torso: 1882713224010137808
+      Solider_Blue_Heavy_LeftHand: -5595077002303859413
+      Solider_Blue_Heavy_RightHand: -2126204068175764716
+      Solider_Blue_Heavy_Head: 2420910491194268172
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

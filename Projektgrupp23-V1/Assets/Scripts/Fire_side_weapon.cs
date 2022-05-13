@@ -23,12 +23,16 @@ public class Fire_side_weapon : MonoBehaviour
     private GameObject muzzleFlashOBJ;
     private MuzzelFlash muzzelFlashSCR;
 
+    GameObject ammoUI;
+
     Coroutine firingCoroutine;
+
+    int ammo;
 
     private void Start()
     {
-        Debug.Log("What");
         cam = FindObjectOfType<Camera>();
+        ammoUI = GameObject.Find("Ammo");
         //muzzelFlashSCR = muzzleFlashOBJ.GetComponent<MuzzelFlash>();
         //muzzleFlash();
         //muzzleFlashOBJ.transform.position = firePoint.transform.position;
@@ -36,23 +40,85 @@ public class Fire_side_weapon : MonoBehaviour
         //muzzleFlashOBJ.transform.localScale = firePoint.transform.localScale;
         muzzleFlashOBJ = Instantiate(muzzleFlashePrefab, firePoint);
         muzzelFlashSCR = muzzleFlashOBJ.GetComponent<MuzzelFlash>();
+
+        SetAmmo();
+    }
+
+    public void SetAmmo()
+    {
+        switch (gameObject.name)
+        {
+            case "SW 0":
+                ammo = 5;
+                break;
+            case "SW 1":
+                ammo = 5;
+                break;
+            case "SW 2":
+                ammo = 30;
+                break;
+            case "SW 3":
+                ammo = 20;
+                break;
+            case "SW 4":
+                ammo = 15;
+                break;
+            case "SW 5":
+                ammo = 15;
+                break;
+            case "SW 6":
+                ammo = 15;
+                break;
+            case "SW 7":
+                ammo = 15;
+                break;
+            case "SW 8":
+                ammo = 15;
+                break;
+            case "SW 9":
+                ammo = 15;
+                break;
+            case "SW 10":
+                ammo = 15;
+                break;
+            case "SW 11":
+                ammo = 15;
+                break;
+            case "SW 12":
+                ammo = 15;
+                break;
+            case "SW 13":
+                ammo = 15;
+                break;
+            default:
+                break;
+        }
+
+        ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = ammo.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
 
-            //muzzleFlash();
-            Fire();
-            firingCoroutine = StartCoroutine(Fire());
-            
+        if (ammo > 0)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                //muzzleFlash();
+
+                Fire();
+                firingCoroutine = StartCoroutine(Fire());
+
+            }
         }
+
         if (Input.GetButtonUp("Fire2"))
         {
-            StopCoroutine(firingCoroutine);
+            if (firingCoroutine != null)
+                StopCoroutine(firingCoroutine);
         }
+
     }
 
     void AnimateMuzzleFlash()
@@ -81,9 +147,31 @@ public class Fire_side_weapon : MonoBehaviour
             //Quaternion fireRotation = firePoint.rotation * Quaternion.Euler(0, 0, 90);
             // Because the Bullet asset is laying sideways I had to rotate the bullet 90%
 
+
+
+
+
+
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
+
+
+            ammo--;
+
+            ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = ammo.ToString();
+
+            if (ammo == 0)
+            {
+                SetAmmo();
+                gameObject.SetActive(false);
+
+                GameObject player = GameObject.FindWithTag("Player");
+                PickUpWeapon pickUpWeapon = player.GetComponent<PickUpWeapon>();
+                pickUpWeapon.weapon_Number = -1;
+
+                ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+            }
 
 
             if (shootSound != null)

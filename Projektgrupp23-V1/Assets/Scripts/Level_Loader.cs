@@ -7,11 +7,11 @@ public class Level_Loader : MonoBehaviour
 {
 
     int activeSceenIndex;
+    bool inMenu = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start");
         activeSceenIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -19,15 +19,31 @@ public class Level_Loader : MonoBehaviour
     {
         if(activeSceenIndex != 0)
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (inMenu == false)
             {
-                Time.timeScale = 0;
-                Transform pauceMenu = FindObjectOfType<PauceMenu>().transform;
-                foreach(Transform child in pauceMenu)
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    child.gameObject.SetActive(true);
+                    Time.timeScale = 0;
+                    Transform pauceMenu = FindObjectOfType<PauceMenu>().transform;
+                    foreach (Transform child in pauceMenu)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                    inMenu = true;
+                }
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    Time.timeScale = 0;
+                    Transform shop = GameObject.Find("Shop").transform;
+
+                    foreach (Transform child in shop)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                    inMenu = true;
                 }
             }
+            
         }
     }
 
@@ -35,10 +51,17 @@ public class Level_Loader : MonoBehaviour
     {
         Time.timeScale = 1;
         Transform pauceMenu = FindObjectOfType<PauceMenu>().transform;
+        Transform shop = GameObject.Find("Shop").transform;
+
         foreach (Transform child in pauceMenu)
         {
             child.gameObject.SetActive(false);
         }
+        foreach (Transform child in shop)
+        {
+            child.gameObject.SetActive(false);
+        }
+        inMenu = false;
     }
 
     public void LoadMainMenu()
@@ -52,6 +75,12 @@ public class Level_Loader : MonoBehaviour
     {
         Debug.Log("Load next scene");
         SceneManager.LoadScene(activeSceenIndex + 1);
+    }
+
+    public void LoadGameOver()
+    {
+        Debug.Log("Load Game Over sreen");
+        SceneManager.LoadScene("Game Over");
     }
 
     public void QuitGame()

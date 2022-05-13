@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -280,6 +281,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      AlienSpider1_RightLeg1: 6593082777602056826
+      AlienSpider1_RightLeg3: -2187860675653938030
+      AlienSpider1_Body: 8122627013204949539
+      AlienSpider1_LeftLeg3: -5909280355620262916
+      AlienSpider1_LeftLeg2: 7582140065924808012
+      AlienSpider1_RightLeg2: 8841414307875252592
+      AlienSpider1_LeftLeg1: -3777762487211200460
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

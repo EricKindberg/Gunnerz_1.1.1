@@ -37,7 +37,7 @@ public class EnemyMeleeAttack : MonoBehaviour
                 {
                     enemy.GetComponent<PlayerHealth>().TakeDamage(damage);
                     nextTimeToFire = Time.time + 1f / fireRate;
-                    Debug.Log("Hit"+enemy.name);
+                    //Debug.Log("Hit"+enemy.name);
                 }
             }
         }

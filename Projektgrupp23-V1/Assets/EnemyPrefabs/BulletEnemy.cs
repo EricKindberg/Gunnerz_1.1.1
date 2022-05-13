@@ -13,43 +13,28 @@ public class BulletEnemy : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag=="player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "player")
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 0.25f);
-            Destroy(gameObject);
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
-        else if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag != "Enemy")
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 0.25f);
             Destroy(gameObject);
         }
     }
-    private void OnParticleCollision(GameObject other)
+    private void OnParticleCollision(GameObject other) //en av dessa ska användas en kan tas bortt
     {
-        if(other.tag=="Player"||other.tag == "player")
+        if (other.tag == "Player" || other.tag == "player")
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 0.25f);
-            Destroy(gameObject);
+            ;
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
-        else if (other.tag == "Obstacle")
+        if (other.gameObject.tag != "Enemy")
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 0.25f);
             Destroy(gameObject);
         }
     }
-    
+
 }
