@@ -9,6 +9,13 @@ TagManager:
   - PlayerBullet
   - Obstacle
   - Money
+  - Destructible
+  - PortalDoor
+  - DroppableMoney
+  - Water
+  - ActiveWeapon
+  - NonActiveWeapon
+  - Water
   layers:
   - Default
   - TransparentFX

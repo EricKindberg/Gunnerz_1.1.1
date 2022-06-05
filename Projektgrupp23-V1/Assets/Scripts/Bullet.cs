@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bulletLifeTime = 4f;
-    public int bulletDamage = 10;
-    public GameObject hitEffect;
+    [SerializeField] float bulletLifeTime = 4f;
+    [SerializeField] int bulletDamage = 10;
+    [SerializeField] GameObject hitEffect;
     private void Start()
     {
+        var colliderToIgnore = GameObject.FindGameObjectWithTag("Water").GetComponent<CompositeCollider2D>();
+        Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(),colliderToIgnore);
         StartCoroutine(SelfDestroy());
     }
 
@@ -18,19 +20,15 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakingDamage(bulletDamage);
         }
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.25f);
-        Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Destructible")
         {
-            collision.gameObject.GetComponent<EnemyHealth>().TakingDamage(bulletDamage);
-            //enemy.HandleDamage(bulletDamage);
+            collision.gameObject.GetComponent<DestructibleHealth>().TakingDamage(bulletDamage);
+        }
+        if (collision.gameObject.tag != "Water")
+        {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 0.25f);
+            Destroy(gameObject);
         }
     }
 

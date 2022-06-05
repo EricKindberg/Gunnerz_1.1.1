@@ -9,11 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: ad78e6c5b54f2e74ba4704bb74e9525d
   - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: d6795270164f0d946b366c06210d150d
+  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: c459713a4dbd08e4b864fb287935dd11
   - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 43b21ea9858e9a5428600a73dad41257
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 3f648ba1a57cb0545bb597b42eadf031
+  - enabled: 1
     path: Assets/Scenes/UI/menu.unity
     guid: 6a5ef1a8ddc639042aaff696729224ae
+  - enabled: 1
+    path: Assets/Scenes/UI/Options Menu.unity
+    guid: ed6a54b06575fb04782643a172933353
   - enabled: 1
     path: Assets/Scenes/CesarV1.unity
     guid: b44052c6881849f4f81c6bce36eecfd1

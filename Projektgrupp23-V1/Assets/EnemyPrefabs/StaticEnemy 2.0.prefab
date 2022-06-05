@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 3958941133907916611}
   - component: {fileID: 3958941133907916615}
   - component: {fileID: 3958941133907916608}
+  - component: {fileID: 4654840005540050628}
   m_Layer: 7
   m_Name: StaticEnemy 2.0
   m_TagString: Enemy
@@ -238,9 +239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caff66ea6f9248948baa2befba054ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 10
   health: 5
   hitSound: {fileID: 3958941133907916611}
   deathSound: {fileID: 8300000, guid: b742084d5679a284d9219fc6db967376, type: 3}
+  blood_Partical: {fileID: 0}
 --- !u!82 &3958941133907916611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -374,6 +377,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.32769868}
   m_Size: {x: 1.33, y: 1.9853971}
   m_Direction: 0
+--- !u!95 &4654840005540050628
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958941133907916638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40f8e3b258f162f4ebe817d4a36bebbf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3958941134033030715
 GameObject:
   m_ObjectHideFlags: 0

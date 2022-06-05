@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public int health = 100;
-
-    void Start()
-    {
-        
-    }
+    public int scoreValue = 10;
 
     public void HandleDamage(int damage)
     {
@@ -24,12 +18,14 @@ public class Enemy : MonoBehaviour
 
     public void HandleDeath()
     {
+        try
+        {
+            GameObject player = GameObject.Find("Player");
+            player.GetComponent<PlayerScore>().addToScore(scoreValue);
+        } catch
+        {
+            Debug.Log("Failed to add to score!");
+        }
         Destroy(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -476,7 +476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5319620953527817659}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: BuyHealthPot
         m_Mode: 1
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5319620953527817659}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: BuyCoffee
         m_Mode: 1
@@ -1215,6 +1215,7 @@ GameObject:
   - component: {fileID: 3609832630138621697}
   - component: {fileID: 3609832630138621698}
   - component: {fileID: 3609832630138621699}
+  - component: {fileID: 5319620953527817659}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1309,6 +1310,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5319620953527817659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609832630138621700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dad0c02de8a732448a3d4248e723076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3609832630141756388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,8 +1895,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Level_Loader, Assembly-CSharp
+      - m_Target: {fileID: 5319620953527817659}
+        m_TargetAssemblyTypeName: GamePauser, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
