@@ -3400,11 +3400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4694600105674161266, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.43
+      value: 6.61
       objectReference: {fileID: 0}
     - target: {fileID: 4694600105674161266, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.03
+      value: 5.49
       objectReference: {fileID: 0}
     - target: {fileID: 4694600105674161266, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3443,8 +3443,16 @@ PrefabInstance:
       value: 2.9406662
       objectReference: {fileID: 0}
     - target: {fileID: 4694600105674161267, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5747242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694600105674161267, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
       propertyPath: m_Offset.x
       value: 0.19373131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694600105674161267, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.2873621
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb9bc7ebb57baa459b6009251479a73, type: 3}
@@ -4611,6 +4619,14 @@ PrefabInstance:
       propertyPath: mSlider
       value: 
       objectReference: {fileID: 2131628092}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 2131628092}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: playerDieExplosion
+      value: 
+      objectReference: {fileID: 4935412220549526595, guid: e973c4c5fb27dd44d97e74d2b1dc6c41, type: 3}
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4654,6 +4670,14 @@ PrefabInstance:
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: mouseOffset
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50cdb23562d15d842b096d739738338d, type: 3}

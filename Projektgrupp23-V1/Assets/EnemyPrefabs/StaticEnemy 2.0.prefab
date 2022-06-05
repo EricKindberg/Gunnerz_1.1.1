@@ -226,7 +226,7 @@ MonoBehaviour:
   damage: 1
   shootingRadius: 12
   timeBetweenShots: 0.5
-  fireRate: 0.3
+  attacksPerSec: 15
 --- !u!114 &3958941133907916610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   health: 5
   hitSound: {fileID: 3958941133907916611}
   deathSound: {fileID: 8300000, guid: b742084d5679a284d9219fc6db967376, type: 3}
-  blood_Partical: {fileID: 0}
+  bloodParticle: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
 --- !u!82 &3958941133907916611
 AudioSource:
   m_ObjectHideFlags: 0

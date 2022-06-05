@@ -1155,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7556926614653973857, guid: c38a5d4eb885c8649bc8d1b6e5ca53bc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7556926614653973857, guid: c38a5d4eb885c8649bc8d1b6e5ca53bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90298,6 +90298,14 @@ PrefabInstance:
       propertyPath: mSlider
       value: 
       objectReference: {fileID: 1664702588}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1664702588}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: playerDieExplosion
+      value: 
+      objectReference: {fileID: 4935412220549526595, guid: e973c4c5fb27dd44d97e74d2b1dc6c41, type: 3}
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -90341,6 +90349,14 @@ PrefabInstance:
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: mouseOffset
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50cdb23562d15d842b096d739738338d, type: 3}
@@ -90625,7 +90641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424036177420359905, guid: 69c62d34a228cff4fa9e88a633b53ed7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 424036177420359905, guid: 69c62d34a228cff4fa9e88a633b53ed7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -120160,7 +120176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183097136181978175, guid: fb7f2d16d11d3e144a92b4cb46a85855, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9183097136181978175, guid: fb7f2d16d11d3e144a92b4cb46a85855, type: 3}
       propertyPath: m_AnchorMax.x
@@ -120766,6 +120782,10 @@ PrefabInstance:
       value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 1456749432586926917, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749432586926917, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: shootingRadius
       value: 6.85
       objectReference: {fileID: 0}
@@ -120789,6 +120809,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.26
       objectReference: {fileID: 0}
+    - target: {fileID: 1456749432663858969, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432663858970, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -120805,10 +120829,18 @@ PrefabInstance:
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749432680247774, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432752175437, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749432752175438, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432752175443, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.56
@@ -120825,10 +120857,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1456749432826789844, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432826789847, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749433329657764, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749433329657767, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -120840,6 +120880,10 @@ PrefabInstance:
     - target: {fileID: 1456749433329657785, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749433484193580, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1456749433484193580, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: shootingRadius
@@ -120865,6 +120909,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -36
       objectReference: {fileID: 0}
+    - target: {fileID: 1456749433808566781, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749433808566782, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -120876,6 +120924,10 @@ PrefabInstance:
     - target: {fileID: 1456749433945059736, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749433958291585, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1456749433958291586, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
@@ -120898,6 +120950,10 @@ PrefabInstance:
       value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 1456749434041198824, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749434041198824, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: shootingRadius
       value: 5.4
       objectReference: {fileID: 0}
@@ -120917,6 +120973,10 @@ PrefabInstance:
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749434395450250, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749434395450263, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.7
@@ -120934,6 +120994,10 @@ PrefabInstance:
       value: -12.3
       objectReference: {fileID: 0}
     - target: {fileID: 1456749434584487517, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749434584487517, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: shootingRadius
       value: 4.9
       objectReference: {fileID: 0}
@@ -120943,7 +121007,7 @@ PrefabInstance:
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
     - target: {fileID: 2506132349573485928, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2506132349573485928, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.x

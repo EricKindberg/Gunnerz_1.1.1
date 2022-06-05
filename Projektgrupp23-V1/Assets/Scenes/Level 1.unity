@@ -138,6 +138,14 @@ PrefabInstance:
       propertyPath: mSlider
       value: 
       objectReference: {fileID: 480250269}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 480250269}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: playerDieExplosion
+      value: 
+      objectReference: {fileID: 1576808468619523817, guid: d564cc762a0f3ce4db646bbb0933854d, type: 3}
     - target: {fileID: 7273593788693650955, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: ghost
       value: 
@@ -185,6 +193,14 @@ PrefabInstance:
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: mouseOffset
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50cdb23562d15d842b096d739738338d, type: 3}

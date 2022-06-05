@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float Health;
     [SerializeField] Slider healthBar;
     private Animator animator;
-    [SerializeField] GameObject playerDieExplotion;
+    [SerializeField] GameObject playerDieExplosion;
     [SerializeField] float healthDamageAnimation;
     [SerializeField] float waitForAnimationTimer;
     [SerializeField] float waitForEndScreenTimer;
@@ -64,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
 
     public IEnumerator Die() 
     {
-        Instantiate(playerDieExplotion, transform.position, Quaternion.identity);
+        Instantiate(playerDieExplosion, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(waitForAnimationTimer);
         animator.Play("DieAnimation");
         yield return new WaitForSeconds(waitForEndScreenTimer);

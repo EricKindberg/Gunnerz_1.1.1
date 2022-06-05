@@ -57357,6 +57357,14 @@ PrefabInstance:
       propertyPath: mSlider
       value: 
       objectReference: {fileID: 1052520330}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1052520330}
+    - target: {fileID: 7273593788693650954, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: playerDieExplosion
+      value: 
+      objectReference: {fileID: 4935412220549526595, guid: e973c4c5fb27dd44d97e74d2b1dc6c41, type: 3}
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -57400,6 +57408,14 @@ PrefabInstance:
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273593788693650959, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: mouseOffset
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50cdb23562d15d842b096d739738338d, type: 3}
@@ -57628,6 +57644,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1456749432586926917, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432586926918, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -57656,10 +57676,18 @@ PrefabInstance:
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749432680247774, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432752175437, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749432752175438, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749432752175443, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.41
@@ -57672,6 +57700,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1456749433329657764, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749433329657767, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -57683,6 +57715,10 @@ PrefabInstance:
     - target: {fileID: 1456749433329657785, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.y
       value: 7.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749433484193580, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1456749433484193583, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
@@ -57708,10 +57744,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1456749433808566781, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749433808566782, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
       objectReference: {fileID: 8699504890124929330, guid: 0ee4dfc3f46b95d419eb2095e65e7816, type: 3}
+    - target: {fileID: 1456749433958291585, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1456749433958291586, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical
       value: 
@@ -57743,6 +57787,10 @@ PrefabInstance:
     - target: {fileID: 1456749434584487488, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: m_LocalPosition.y
       value: 7.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456749434584487517, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
+      propertyPath: attacksPerSec
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1456749434584487518, guid: 5593d07ffcfca1b4c9b933d4ae16ee76, type: 3}
       propertyPath: blood_Partical

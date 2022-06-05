@@ -10,7 +10,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float shootingRadius;
     [SerializeField] float timeBetweenShots = 2.0f;
-    [SerializeField] float attacksPerSec = 15f;
+    [SerializeField] float attacksPerSec = 1.5f;
     private Transform target;
     private Rigidbody2D bulletRigidbody;
     private GameObject bullet;
@@ -39,7 +39,7 @@ public class EnemyShooting : MonoBehaviour
             shootingCoroutine = StartCoroutine(FireContinuously());
             inRange = true;
         }
-        else if (Vector2.Distance(target.position, rigidbody.transform.position) >= shootingRadius && inRange == true)
+        else if (Vector2.Distance(target.position, rigidbody.transform.position) <= shootingRadius && inRange == true)
         {
             StopCoroutine(shootingCoroutine);
             inRange = false;
