@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: mSlider
       value: 
       objectReference: {fileID: 480250269}
+    - target: {fileID: 7273593788693650955, guid: 50cdb23562d15d842b096d739738338d, type: 3}
+      propertyPath: ghost
+      value: 
+      objectReference: {fileID: 4629662260401937916, guid: 47c5e5af4b236bf46ad4385feac125ec, type: 3}
     - target: {fileID: 7273593788693650958, guid: 50cdb23562d15d842b096d739738338d, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -62393,7 +62397,7 @@ MonoBehaviour:
   score: 0
   ammo: 0
   health: 0
-  weaponNumber: 0
+  weaponID: 0
   isLoaded: 0
 --- !u!4 &1072922195
 Transform:

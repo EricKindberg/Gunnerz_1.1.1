@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class FireMainWeapon : MonoBehaviour
@@ -13,7 +12,7 @@ public class FireMainWeapon : MonoBehaviour
     [SerializeField] float accuracy = 0f;
     Coroutine firingCoroutine;
 
-    Camera cam;
+    Camera camera;
     [SerializeField] GameObject bulletTrailLine;
     [SerializeField] GameObject muzzleFlashPrefab;
     private GameObject muzzleFlashObject;
@@ -24,7 +23,7 @@ public class FireMainWeapon : MonoBehaviour
     private void Start()
     {
         isShooting = false;
-        cam = FindObjectOfType<Camera>();
+        camera = FindObjectOfType<Camera>();
         muzzleFlashObject = Instantiate(muzzleFlashPrefab, firePoint);
         muzzelFlashScript = muzzleFlashObject.GetComponent<MuzzleFlash>();
         gamePauser = FindObjectOfType<GamePauser>();
@@ -55,46 +54,50 @@ public class FireMainWeapon : MonoBehaviour
 
     void AnimateMuzzleFlash()
     {
-        muzzelFlashScript.ResetAnimation();
+        muzzelFlashScript.PlayAnimation();
     }
 
     IEnumerator Fire()
     {
         while (true)
         {
-            GameObject line = Instantiate(bulletTrailLine, firePoint);
-            LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
-
             AnimateMuzzleFlash();
 
             if (audioSource != null)
             {
                 audioSource.Play();
             }
-
-            RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.up);
-            if (hitInfo)
-            {
-                if (hitInfo.transform.gameObject.tag == "Enemy")
-                {
-                    hitInfo.transform.gameObject.GetComponent<EnemyHealth>().TakingDamage(WeaponDamage);
-                }
-                if (hitInfo.transform.gameObject.tag == "Destructible")
-                {
-                    hitInfo.transform.gameObject.GetComponent<DestructibleHealth>().TakingDamage(WeaponDamage);
-                }
-
-                // Bullet trail
-                lineRenderer.SetPosition(0, firePoint.position);
-                lineRenderer.SetPosition(1, firePoint.position + firePoint.up * hitInfo.distance);
-            }
-            else
-            {
-                // Prevents the bullet trail from going to far when not hitting anything
-                lineRenderer.SetPosition(0, firePoint.position);
-                lineRenderer.SetPosition(1, cam.ScreenToWorldPoint(Input.mousePosition));
-            }
+            InstantiateBullet();
+           
             yield return new WaitForSeconds(rateOfFire);
+        }
+    }
+
+    private void InstantiateBullet()
+    {
+        GameObject line = Instantiate(bulletTrailLine, firePoint);
+        LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
+        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.up);
+        if (hitInfo)
+        {
+            if (hitInfo.transform.gameObject.tag == "Enemy")
+            {
+                hitInfo.transform.gameObject.GetComponent<EnemyHealth>().TakingDamage(WeaponDamage);
+            }
+            if (hitInfo.transform.gameObject.tag == "Destructible")
+            {
+                hitInfo.transform.gameObject.GetComponent<DestructibleHealth>().TakingDamage(WeaponDamage);
+            }
+
+            //This is the bullet trail
+            lineRenderer.SetPosition(0, firePoint.position);
+            lineRenderer.SetPosition(1, firePoint.position + firePoint.up * hitInfo.distance);
+        }
+        else
+        {
+            //Prevents the bullet trail from going to far when not hitting anything
+            lineRenderer.SetPosition(0, firePoint.position);
+            lineRenderer.SetPosition(1, camera.ScreenToWorldPoint(Input.mousePosition));
         }
     }
 

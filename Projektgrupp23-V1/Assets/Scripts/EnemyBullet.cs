@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletEnemy : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] GameObject hitEffect;
     public float Damage = 1;

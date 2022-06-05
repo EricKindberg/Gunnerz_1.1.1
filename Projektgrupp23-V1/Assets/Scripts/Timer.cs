@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float timer;
+    private float timer;
+    public float GetTimer
+    {
+        get => timer;
+        set => timer = value;
+    }
     TMPro.TextMeshProUGUI text;
 
     void Start()
@@ -13,15 +18,13 @@ public class Timer : MonoBehaviour
         text = GetComponent<TMPro.TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
         timer += Time.deltaTime;
         text.text = System.Math.Round(timer, 2).ToString();
     }
 
-    public void resetTimer()
+    public void ResetTimer()
     {
         timer = 0f;
     }

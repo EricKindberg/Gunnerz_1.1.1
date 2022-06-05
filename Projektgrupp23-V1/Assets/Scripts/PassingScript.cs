@@ -20,9 +20,9 @@ public class PassingScript : MonoBehaviour
     public void Set()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        health = player.GetComponent<PlayerHealth>().health;
+        health = player.GetComponent<PlayerHealth>().Health;
         money = player.GetComponent<Money>().Amount;
-        score = player.GetComponent<PlayerScore>().score;
+        score = player.GetComponent<PlayerScore>().Score;
         GameObject gun = GameObject.FindGameObjectWithTag("ActiveWeapon");
         if (gun != null)
         {
@@ -39,7 +39,7 @@ public class PassingScript : MonoBehaviour
         {
             return;
         }
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().health = health;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().Health = health;
 
     }
 
@@ -58,7 +58,7 @@ public class PassingScript : MonoBehaviour
         {
             return;
         }
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScore>().score = score;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScore>().Score = score;
     }
     public void GetWeapon()
     {

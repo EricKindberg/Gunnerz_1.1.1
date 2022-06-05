@@ -10,21 +10,20 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] float shootingRadius;
     [SerializeField] float timeBetweenShots = 2.0f;
-    [SerializeField] float fireRate = 15f;
+    [SerializeField] float attacksPerSec = 15f;
     private Transform target;
-    private Rigidbody2D bulletRb;
+    private Rigidbody2D bulletRigidbody;
     private GameObject bullet;
 
-    private Rigidbody2D thisRb;
+    private Rigidbody2D rigidbody;
     private Coroutine shootingCoroutine;
     private bool inRange = false;
     private float nextFire = 0f;
 
     void Start()
     {
-        thisRb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         target = FindObjectOfType<PlayerMovement>().transform;
-        Vector2 direction = (target.position - transform.position).normalized;
     }
 
     private void FixedUpdate()
@@ -34,13 +33,13 @@ public class EnemyShooting : MonoBehaviour
     }
     void Shoot()
     {
-        if (Vector2.Distance(target.position, thisRb.transform.position) <= shootingRadius)
+        if (Vector2.Distance(target.position, rigidbody.transform.position) <= shootingRadius)
         {
             FireContinuously();
             shootingCoroutine = StartCoroutine(FireContinuously());
             inRange = true;
         }
-        else if (Vector2.Distance(target.position, thisRb.transform.position) <= shootingRadius && inRange == true)
+        else if (Vector2.Distance(target.position, rigidbody.transform.position) >= shootingRadius && inRange == true)
         {
             StopCoroutine(shootingCoroutine);
             inRange = false;
@@ -48,17 +47,17 @@ public class EnemyShooting : MonoBehaviour
     }
     void UpdatingDirection()
     {
-        var ePos = thisRb.transform.position;
+        var ePos = rigidbody.transform.position;
         var tPos = target.position;
         float angle = Mathf.Rad2Deg * Mathf.Atan2(tPos.y - ePos.y, tPos.x - ePos.x) - 90f;
-        thisRb.rotation = angle;
+        rigidbody.rotation = angle;
     }
 
     IEnumerator FireContinuously()
     {
-        while (Vector2.Distance(target.position, thisRb.transform.position) <= shootingRadius && Time.time > nextFire)
+        while (Vector2.Distance(target.position, rigidbody.transform.position) <= shootingRadius && Time.time > nextFire)
         {
-            nextFire = Time.time + 1f / fireRate;
+            nextFire = Time.time + 1f / attacksPerSec;
             InstantiateBullet();
             yield return new WaitForSeconds(timeBetweenShots);
         }
@@ -68,9 +67,9 @@ public class EnemyShooting : MonoBehaviour
     {
         Vector2 dir = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y).normalized;
         bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bullet.GetComponent<BulletEnemy>().Damage = damage;
-        bulletRb.velocity = new Vector2(dir.x * bulletForce,
+        bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        bullet.GetComponent<EnemyBullet>().Damage = damage;
+        bulletRigidbody.velocity = new Vector2(dir.x * bulletForce,
             dir.y * bulletForce);
     }
 

@@ -70,12 +70,13 @@
     <Compile Include="Assets\Scripts\TutorialScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\StageOneBehaviour.cs" />
-    <Compile Include="Assets\Scripts\BulletEnemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\MuzzleFlash.cs" />
     <Compile Include="Assets\Scripts\GroundMoney.cs" />
     <Compile Include="Assets\Scripts\Shit\PlayerMovementEric.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\Shit\EnemyPathing.cs" />
+    <Compile Include="Assets\EnemyBoss3Behaviour1To2.cs" />
     <Compile Include="Assets\Scripts\HighScores.cs" />
     <Compile Include="Assets\Scripts\Shit\HandlingEnemyPaths.cs" />
     <Compile Include="Assets\Assets\PrticleScript.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\StageTwoBehaviour.cs" />
     <Compile Include="Assets\Scripts\FireSideWeapon.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\EnemyBoss3Behaviour1.cs" />
     <Compile Include="Assets\Scripts\DestructibleHealth.cs" />
     <Compile Include="Assets\Scripts\UpdateMoney.cs" />
     <Compile Include="Assets\Scripts\Rocket.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="Assets\Scripts\WeaponID.cs" />
     <Compile Include="Assets\Scripts\EnemyMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyShooting.cs" />
+    <Compile Include="Assets\EnemyBoss3Behaviour2.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
   </ItemGroup>
   <ItemGroup>

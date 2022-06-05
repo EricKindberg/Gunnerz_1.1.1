@@ -93,7 +93,7 @@ public class FireSideWeapon : MonoBehaviour
 
     void Update()
     {
-        if (ammo > 0 && !gamePauser.InMenu) //Man kan inte skjuta när man är i shoppen
+        if (ammo > 0 && !gamePauser.InMenu) //You can't shoot while in the shop.
         {
 
             if (Input.GetButtonDown("Fire2") && isShooting == false)
@@ -119,31 +119,36 @@ public class FireSideWeapon : MonoBehaviour
     {
         while (true)
         {
-            GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
-
-            ammo--;
-
-            ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = ammo.ToString();
-
+            InstantiateBulletAndUpdateUI();
             if (ammo == 0)
             {
-                SetAmmo();
-                gameObject.SetActive(false);
-
-                GameObject player = GameObject.FindWithTag("Player");
-                PickUpWeapon pickUpWeapon = player.GetComponent<PickUpWeapon>();
-                pickUpWeapon.weaponID = -1;
-
-                ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+                DropWeapon();
             }
-
             if (shootSound != null)
             {
                 shootSound.Play();
             }
             yield return new WaitForSeconds(rateOfFire);
         }
+    }
+        private void DropWeapon()
+        {
+            SetAmmo();
+            gameObject.SetActive(false);
+
+            GameObject player = GameObject.FindWithTag("Player");
+            PickUpWeapon pickUpWeapon = player.GetComponent<PickUpWeapon>();
+            pickUpWeapon.weaponID = -1; //Is set to -1 same as using null.
+
+            ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = "";
+        }
+
+    private void InstantiateBulletAndUpdateUI()
+    {
+        GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
+        ammo--;
+        ammoUI.GetComponent<TMPro.TextMeshProUGUI>().text = ammo.ToString();
     }
 }

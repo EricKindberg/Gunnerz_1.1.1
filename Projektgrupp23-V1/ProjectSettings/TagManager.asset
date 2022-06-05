@@ -16,6 +16,7 @@ TagManager:
   - ActiveWeapon
   - NonActiveWeapon
   - Water
+  - CanShootThrough
   layers:
   - Default
   - TransparentFX

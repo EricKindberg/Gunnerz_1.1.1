@@ -319,7 +319,7 @@ Transform:
   m_Children:
   - {fileID: 1800431461}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &190357015
 PrefabInstance:
@@ -120160,7 +120160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183097136181978175, guid: fb7f2d16d11d3e144a92b4cb46a85855, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9183097136181978175, guid: fb7f2d16d11d3e144a92b4cb46a85855, type: 3}
       propertyPath: m_AnchorMax.x
@@ -120283,7 +120283,7 @@ Transform:
   - {fileID: 889118155}
   - {fileID: 743547162}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519098759
 GameObject:
@@ -120618,6 +120618,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbc7e876b65dc9b4f869c4c62785e305, type: 3}
+--- !u!114 &1700951570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 35465220838082768, guid: bbc7e876b65dc9b4f869c4c62785e305, type: 3}
+  m_PrefabInstance: {fileID: 1700951569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dad0c02de8a732448a3d4248e723076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1711133959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120625,6 +120636,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3609832629442211396, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1700951570}
+    - target: {fileID: 3609832629442211396, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyHealthPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3609832629463457396, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1700951570}
+    - target: {fileID: 3609832629463457396, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyCoffee
+      objectReference: {fileID: 0}
     - target: {fileID: 3609832630138621696, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -120635,7 +120662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3609832630138621696, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3609832630138621696, guid: 87521fdff012e794b856ccb509cd6e55, type: 3}
       propertyPath: m_AnchorMax.x

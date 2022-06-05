@@ -7,8 +7,8 @@ public class AttackOneBehaviour : StateMachineBehaviour
     private Transform player;
     private Rigidbody2D rigidbody;
     private EnemyHealth enemyHealth;
-    private Animator animator;
     [SerializeField] float offset;
+    private int health;
   
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,27 +16,20 @@ public class AttackOneBehaviour : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rigidbody = animator.GetComponent<Rigidbody2D>();
         enemyHealth = animator.GetComponent<EnemyHealth>();
+        health = 100;
     }
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        
-        Vector3 diraction = player.position - animator.transform.position;
-        float angle = Mathf.Atan2(diraction.y, diraction.x) * Mathf.Rad2Deg - offset ;
+        Vector3 direction = player.position - animator.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - offset ;
         rigidbody.rotation = angle;
 
-        if (enemyHealth.health <= 100)
+        if (enemyHealth.health <= health)
         {
             animator.Play("AttackTwo");
         }
     }
-
-   
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-
-    }
-
-
 }

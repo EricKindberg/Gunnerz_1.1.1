@@ -1,0 +1,76 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      149
+    ],
+    "SourceCsetId": 150,
+    "DestinationCsetId": 149,
+    "FileConflicts": [
+      {
+        "Path": "/ProjectSettings/EditorBuildSettings.asset",
+        "ItemId": 134,
+        "ParentItemId": 127,
+        "BaseRevId": 23922,
+        "SourceRevId": 24037,
+        "DestinationRevId": 23922
+      },
+      {
+        "Path": "/Assets/Scripts/PlayerMovement.cs",
+        "ItemId": 2928,
+        "ParentItemId": 2888,
+        "BaseRevId": 23831,
+        "SourceRevId": 24034,
+        "DestinationRevId": 23831
+      },
+      {
+        "Path": "/Assets/Scripts/PlayerHealth.cs",
+        "ItemId": 8489,
+        "ParentItemId": 2888,
+        "BaseRevId": 23912,
+        "SourceRevId": 24033,
+        "DestinationRevId": 23912
+      },
+      {
+        "Path": "/Assets/Scripts/FireMainWeapon.cs",
+        "ItemId": 9844,
+        "ParentItemId": 2888,
+        "BaseRevId": 23569,
+        "SourceRevId": 24029,
+        "DestinationRevId": 23569
+      },
+      {
+        "Path": "/Assets/Scripts/FireSideWeapon.cs",
+        "ItemId": 9846,
+        "ParentItemId": 2888,
+        "BaseRevId": 23908,
+        "SourceRevId": 24030,
+        "DestinationRevId": 23908
+      },
+      {
+        "Path": "/Assets/Scripts/TutorialScript.cs",
+        "ItemId": 22510,
+        "ParentItemId": 2888,
+        "BaseRevId": 23609,
+        "SourceRevId": 24035,
+        "DestinationRevId": 23609
+      },
+      {
+        "Path": "/Assets/Scripts/PassingScript.cs",
+        "ItemId": 23555,
+        "ParentItemId": 2888,
+        "BaseRevId": 24004,
+        "SourceRevId": 24031,
+        "DestinationRevId": 24004
+      },
+      {
+        "Path": "/Assets/Scenes/Level 1.unity",
+        "ItemId": 10623,
+        "ParentItemId": 2885,
+        "BaseRevId": 23608,
+        "SourceRevId": 24024,
+        "DestinationRevId": 23608
+      }
+    ]
+  }
+]

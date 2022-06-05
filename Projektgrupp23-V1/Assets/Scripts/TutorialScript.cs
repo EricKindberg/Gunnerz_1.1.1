@@ -10,7 +10,6 @@ public class TutorialScript : MonoBehaviour
     private float timePast;
     [SerializeField] float timer = 5;
     [SerializeField] GameObject doors;
-    private bool hasSpawnedEnemy;
     [SerializeField] BoxCollider2D activateEnemyTrigger;
 
     enum State
@@ -84,7 +83,7 @@ public class TutorialScript : MonoBehaviour
                 break;
             case State.Shoot1:
                 tutorialTexts[(int)State.Shoot1].enabled = true;
-                if (!doors.GetComponent<CircleCollider2D>().enabled)
+                if (!doors.GetComponent<BoxCollider2D>().enabled)
                 {
                     tutorialTexts[(int)State.Shoot1].enabled = false;
                     enemy.SetActive(true);

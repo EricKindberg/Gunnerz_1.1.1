@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     private Transform playerPos;
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject enemyPrefab;
     [SerializeField] int amount;
     private float counter;
-    [SerializeField] float spawnRateMiliSec;
+    [SerializeField] float spawnRateSec;
     [SerializeField] float range;
     void Start()
     {
@@ -19,10 +19,10 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (counter >= spawnRateMiliSec)
+        if (counter >= spawnRateSec)
         {
             SpawnEnemy();
-            counter -= spawnRateMiliSec;
+            counter -= spawnRateSec;
         }
     }
 
@@ -53,15 +53,11 @@ public class EnemySpawner : MonoBehaviour
     {
         if (amount > 0)
         {
-            try
-            {
-                GameObject newEnemy = Instantiate(enemy, GetSpawnLocation().position, Quaternion.identity);
-                amount--;
-            }
-            catch
-            {
-                Debug.LogError("ERROR SPAWINING ENEMY!");
-            }
+                if (enemyPrefab!=null)
+                {
+                    GameObject newEnemy = Instantiate(enemyPrefab, GetSpawnLocation().position, Quaternion.identity);
+                    amount--;
+                }
         }
     }
     private float Distance(Transform first, Transform second)

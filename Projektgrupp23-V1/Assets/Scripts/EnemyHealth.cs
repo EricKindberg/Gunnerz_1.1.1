@@ -5,19 +5,12 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    
+
     [SerializeField] int scoreValue = 10;
     public float health = 20;
     [SerializeField] AudioSource hitSound;
     [SerializeField] AudioClip deathSound;
-    private GameObject money;
-    private Money pengar;
-    [SerializeField] GameObject blood_Partical;
-
-    void Start()
-    {
-
-    }
+    [SerializeField] GameObject bloodParticle;
 
     public void TakingDamage(int damage)
     {
@@ -26,36 +19,8 @@ public class EnemyHealth : MonoBehaviour
         {
             GetComponentInChildren<HealthBar>().hp = health;
         }
-        
-        Instantiate(blood_Partical, transform.position,Quaternion.identity);
-       
-        if (health <= 0)
-        {
-            Instantiate(GetMoney(), transform.position, Quaternion.identity);
-            AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, 0.5f);
-
-            try
-            {
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
-                player.GetComponent<PlayerScore>().addToScore(scoreValue);
-            }
-            catch
-            {
-                Debug.Log("Failed to add to score!");
-            }
-
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-            
-        }
-        else
-        {
-            if (hitSound != null)
-            {
-                hitSound.Play();
-            }
-        }
-        
+        Instantiate(bloodParticle, transform.position, Quaternion.identity);
+        Die();
     }
 
     GameObject GetMoney()
@@ -74,4 +39,30 @@ public class EnemyHealth : MonoBehaviour
             return Resources.Load("GoldPrefab") as GameObject;
         }
     }
+
+    private void Die()
+    {
+        if (health <= 0)
+        {
+            Instantiate(GetMoney(), transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, 0.5f);
+
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                player.GetComponent<PlayerScore>().AddToScore(scoreValue);
+            }
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+
+        }
+        else
+        {
+            if (hitSound != null)
+            {
+                hitSound.Play();
+            }
+        }
+    }
+
 }

@@ -13,7 +13,7 @@ public class GroundMoney : MonoBehaviour
             Money money = FindObjectOfType<Money>();
             money.AddMoney(value);
             PlayerScore playerScore = FindObjectOfType<PlayerScore>();
-            playerScore.addToScore(scoreValue);
+            playerScore.AddToScore(scoreValue);
             Destroy(gameObject);
         }
     }

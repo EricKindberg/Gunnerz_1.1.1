@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         try
         {
             GameObject player = GameObject.Find("Player");
-            player.GetComponent<PlayerScore>().addToScore(scoreValue);
+            player.GetComponent<PlayerScore>().AddToScore(scoreValue);
         } catch
         {
             Debug.Log("Failed to add to score!");

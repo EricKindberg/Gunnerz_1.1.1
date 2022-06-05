@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
     [Range(2.5f,6.5f)] [SerializeField] float rotationOffset = 5f;
 
     Rigidbody2D rigidbody;
-    Camera cam;
+    Camera camera;
     Vector2 movement;
     Vector2 mousePos;
     GameObject coffeeBuffButton;
-    bool coffeActive;
+    bool coffeeActive; //Coffe is used as a movementspeed boost
     float coffeeDuration = 0;
-    float coffeMaxDuration = 60;
+    float coffeeMaxDuration = 60;
     float coffeeBuff = 0;
     public Texture2D mouseCursor;
     public int mouseOffset;
@@ -23,37 +23,32 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        cam = FindObjectOfType<Camera>();
+        camera = FindObjectOfType<Camera>();
         coffeeBuffButton = GameObject.Find("Coffee");
         coffeeBuffButton.SetActive(false);
         Cursor.SetCursor(mouseCursor, new Vector2(mousePos.x - mouseOffset, mousePos.y - mouseOffset), CursorMode.ForceSoftware);
-
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        Vector2 aimDir = mousePos - rigidbody.position;
-        float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
-        rigidbody.rotation = angle;
+        mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
+        UpdatingDirection();
 
         CoffeeUpdate();
-       
     }
 
     void CoffeeUpdate()
     {
-        if (coffeActive == false)
+        if (coffeeActive == false)
         {
             return;
         }
-        if (coffeeDuration >= coffeMaxDuration)
+        if (coffeeDuration >= coffeeMaxDuration)
         {
             coffeeBuffButton.SetActive(false);
-            coffeActive = false;
+            coffeeActive = false;
             moveSpeed -= coffeeBuff;
         }
         else
@@ -65,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     public void IncreaseMoveSpeed(float aValue)
     {
         coffeeBuffButton.SetActive(true);
-        coffeActive = true;
+        coffeeActive = true;
         coffeeBuff = aValue;
         coffeeDuration = 0;
         moveSpeed += aValue;
@@ -74,5 +69,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rigidbody.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
+    }
+    private void UpdatingDirection()
+    {
+        Vector2 aimDir = mousePos - rigidbody.position;
+        float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg - 90f;
+        rigidbody.rotation = angle;
     }
 }

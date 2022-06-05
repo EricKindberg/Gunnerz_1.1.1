@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3916422295249761216}
   - component: {fileID: 3916422295249761223}
   - component: {fileID: 3916422295249761217}
-  - component: {fileID: -8353621944664076719}
-  - component: {fileID: 3238281502005068030}
-  - component: {fileID: -4141213949903353842}
+  - component: {fileID: -4491112627985373697}
+  - component: {fileID: -6584086433933050080}
+  - component: {fileID: 1440713228714513809}
   m_Layer: 0
   m_Name: EnemyBoss2-laser
   m_TagString: PlayerBullet
@@ -104,22 +104,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0029686294}
   serializedVersion: 2
   m_Radius: 0.092974745
---- !u!114 &-8353621944664076719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3916422295249761222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a46e44048f4b8542a26fa47214ea3ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletLifeTime: 4
-  bulletDamage: 10
-  bulletHealth: 30
---- !u!114 &3238281502005068030
+--- !u!114 &-4491112627985373697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 2284967954130952997, guid: 1ef33a848a715034d873350b34c40a23, type: 3}
   Damage: 1
---- !u!50 &-4141213949903353842
+--- !u!50 &-6584086433933050080
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -154,3 +139,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1440713228714513809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3916422295249761222}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a46e44048f4b8542a26fa47214ea3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletLifeTime: 4
+  bulletDamage: 10
+  bulletHealth: 30

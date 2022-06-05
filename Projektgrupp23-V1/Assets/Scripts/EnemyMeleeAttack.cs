@@ -5,15 +5,15 @@ using UnityEngine;
 public class EnemyMeleeAttack : MonoBehaviour
 {
     [SerializeField] int damage = 1;
-    [SerializeField] float fireRate = 1f;
+    [SerializeField] float attacksPerSec = 1f;
     [SerializeField] float attackRadius;
     [SerializeField] Transform attackPoint;
-    [SerializeField] LayerMask enemyLayers;
+    [SerializeField] LayerMask playerLayer;
     private float nextTimeToFire = 0f;
     private Animator animator;
     private Transform playerPos;
 
-     void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -22,7 +22,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         Attack();
         float distance = 1.5f;
-        if (Vector2.Distance(transform.position,playerPos.position) < distance)
+        if (Vector2.Distance(transform.position, playerPos.position) < distance)
         {
             animator.Play("Alien8_MeleeAttack");
         }
@@ -30,28 +30,25 @@ public class EnemyMeleeAttack : MonoBehaviour
         {
             animator.Play("Alien8_Walking");
         }
-       
-       
     }
     private void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayers);
-        if (hitEnemies != null)
+        if (Time.time > nextTimeToFire)
         {
-            foreach (Collider2D enemy in hitEnemies)
+            Collider2D[] collidersHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
+            if (collidersHit != null)
             {
-                if (enemy.tag == "Player"&& Time.time > nextTimeToFire)
+                foreach (Collider2D collider in collidersHit)
                 {
-                    
-                    enemy.GetComponent<PlayerHealth>().TakeDamage(damage);
-                    nextTimeToFire = Time.time + 1f / fireRate;
-
+                    if (collider.tag == "Player")
+                    {
+                        collider.GetComponent<PlayerHealth>().TakeDamage(damage);
+                        nextTimeToFire = Time.time + 1f / attacksPerSec;
+                    }
 
                 }
-               
             }
         }
-        //Play animation
     }
     private void OnDrawGizmosSelected()
     {
@@ -59,6 +56,6 @@ public class EnemyMeleeAttack : MonoBehaviour
         {
             return;
         }
-        Gizmos.DrawWireSphere(attackPoint.position,attackRadius);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
     }
 }

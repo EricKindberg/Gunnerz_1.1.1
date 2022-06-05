@@ -13,8 +13,8 @@ public class AmmunitionPickUp : MonoBehaviour
             GameObject weapon = GameObject.FindGameObjectWithTag("ActiveWeapon");
             weapon.GetComponent<FireSideWeapon>().AddAmmo(value);
             PlayerScore playerScore = FindObjectOfType<PlayerScore>();
-            playerScore.addToScore(scoreValue);
-            Object.Destroy(gameObject);
+            playerScore.AddToScore(scoreValue);
+            Destroy(gameObject);
         }
     }
 }

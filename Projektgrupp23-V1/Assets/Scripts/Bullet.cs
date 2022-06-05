@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     private void Start()
     {
-        var colliderToIgnore = GameObject.FindGameObjectWithTag("Water").GetComponent<CompositeCollider2D>();
+        CompositeCollider2D colliderToIgnore = GameObject.FindGameObjectWithTag("CanShootThrough").GetComponent<CompositeCollider2D>();
         Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(),colliderToIgnore);
         StartCoroutine(SelfDestroy());
     }
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<DestructibleHealth>().TakingDamage(bulletDamage);
         }
-        if (collision.gameObject.tag != "Water")
+        if (collision.gameObject.tag != "CanShootThrough")
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 0.25f);

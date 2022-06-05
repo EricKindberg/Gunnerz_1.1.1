@@ -6,49 +6,44 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
-    public float health;
-    public Slider mSlider;
+    [SerializeField] int maxHealth = 10;
+    public float Health;
+    [SerializeField] Slider healthBar;
     private Animator animator;
     [SerializeField] GameObject playerDieExplotion;
-    public float healthDamageAnimation;
+    [SerializeField] float healthDamageAnimation;
+    [SerializeField] float waitForAnimationTimer;
+    [SerializeField] float waitForEndScreenTimer;
     void Start()
     {
-        health = maxHealth;
+        waitForAnimationTimer = 0.3f;
+        waitForEndScreenTimer = 1.1f;
+        Health = maxHealth;
         if (GameObject.Find("PassableObject") != null)
         {
             GameObject.Find("PassableObject").GetComponent<PassingScript>().GetHealth();
         }
         UpdateHealthBar();
         animator = GetComponent<Animator>();
-         healthDamageAnimation = health;
+         healthDamageAnimation = Health;
     }
-
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            TakeDamage(10);
-        }
-    }*/ //Används denna????
 
     private void UpdateHealthBar()
     {
-        float precentageHealth = (float)health / (float)maxHealth;
-        float sliderValue = precentageHealth * 3.5f;
-        mSlider.value = sliderValue;
+        float precentageHealth = (float)Health / (float)maxHealth;
+        float sliderValue = precentageHealth * 3.5f; //3.5 is tested to be the best value for the healthbar.
+        healthBar.value = sliderValue;
     }
     IEnumerator GettingHurt(float hurtAnimationDelay)
     {
         animator.Play("Red_Solider_light_Hurt");
         yield return new WaitForSeconds(hurtAnimationDelay);
-        healthDamageAnimation = health;
+        healthDamageAnimation = Health;
     }
     private void Update()
     {
-        if (healthDamageAnimation > health)
+        if (healthDamageAnimation > Health)
         {
-
             StartCoroutine(GettingHurt(.7f));
         }
         else
@@ -59,13 +54,9 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        //Debug.Log(health);
-       
-        health -= damage;
-      
-
+       Health -= damage;
         UpdateHealthBar();
-        if (health <= 0)
+        if (Health <= 0)
         {
             StartCoroutine(Die());
         }
@@ -74,17 +65,17 @@ public class PlayerHealth : MonoBehaviour
     public IEnumerator Die() 
     {
         Instantiate(playerDieExplotion, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(waitForAnimationTimer);
         animator.Play("DieAnimation");
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(waitForEndScreenTimer);
         FindObjectOfType<LevelLoader>().LoadGameOver();
     }
     public void Heal(int amountHealed)
     {
-        health += amountHealed;
-        if (health > maxHealth)
+        Health += amountHealed;
+        if (Health > maxHealth)
         {
-            health = maxHealth;
+            Health = maxHealth;
         }
         UpdateHealthBar();
     }

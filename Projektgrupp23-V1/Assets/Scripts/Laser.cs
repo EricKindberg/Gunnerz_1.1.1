@@ -10,7 +10,7 @@ public class Laser : MonoBehaviour
 
     private void Start()
     {
-        var colliderToIgnore = GameObject.FindGameObjectWithTag("Water").GetComponent<CompositeCollider2D>();
+        CompositeCollider2D colliderToIgnore = GameObject.FindGameObjectWithTag("CanShootThrough").GetComponent<CompositeCollider2D>();
         Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(), colliderToIgnore);
         StartCoroutine(SelfDestroy());
     }
@@ -21,19 +21,13 @@ public class Laser : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakingDamage(bulletDamage);
-            //bulletHealth -= bulletDamage;
-            //if (bulletHealth <= 0)
-            //{
-            //  Destroy(gameObject);
-            //}
-
         }
 
         if (collision.gameObject.tag == "Destructible")
         {
             collision.gameObject.GetComponent<DestructibleHealth>().TakingDamage(bulletDamage);
         }
-        if (collision.gameObject.tag != "Water")
+        if (collision.gameObject.tag != "CanShootThrough")
         {
             Destroy(gameObject);
         }

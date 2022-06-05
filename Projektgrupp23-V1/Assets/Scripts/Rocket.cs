@@ -9,14 +9,14 @@ public class Rocket : MonoBehaviour
 
     private void Start()
     {
-        var colliderToIgnore = GameObject.FindGameObjectWithTag("Water").GetComponent<CompositeCollider2D>();
+        Collider2D colliderToIgnore = GameObject.FindGameObjectWithTag("CanShootThrough").GetComponent<CompositeCollider2D>();
         Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(), colliderToIgnore);
         StartCoroutine(SelfDestroy());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Water")
+        if (collision.gameObject.tag != "CanShootThrough")
         {
             Instantiate(explosionPrefab, GetComponent<Transform>().position, Quaternion.identity);
             Destroy(gameObject);

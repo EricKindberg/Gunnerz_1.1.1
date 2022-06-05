@@ -5,28 +5,26 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerScore : MonoBehaviour
 {
-    public int score;
+    public int Score;
     TMPro.TextMeshProUGUI scoreText;
     void Start()
     {
-        score = 0;
+        Score = 0;
         if (GameObject.Find("PassableObject") != null)
         { 
             GameObject.Find("PassableObject").GetComponent<PassingScript>().GetScore();
-
         }
         scoreText = GameObject.Find("Score").GetComponent<TMPro.TextMeshProUGUI>();
         UpdateScore();
     }
-    public void addToScore(int points)
+    public void AddToScore(int points)
     {
-        score += points;
+        Score += points;
         UpdateScore();
     }
 
     private void UpdateScore()
     {
-        TMPro.TextMeshProUGUI text = GetComponent<TMPro.TextMeshProUGUI>();
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + Score.ToString();
     }
 }

@@ -13,6 +13,7 @@ public class PickUpWeapon : MonoBehaviour
             return;
         }
         GameObject.Find("Red_Solider_light_RightHand").transform.GetChild(weaponID).gameObject.SetActive(true);
+        GameObject.Find("Red_Solider_light_RightHand").transform.GetChild(weaponID).gameObject.GetComponent<FireSideWeapon>().SetAmmo();
         GameObject.Find("Red_Solider_light_RightHand").transform.GetChild(weaponID).gameObject.tag = "ActiveWeapon";
         for (int i = 0; i < totalWeapon; i++)
         {

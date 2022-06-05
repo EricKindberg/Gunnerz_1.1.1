@@ -6,11 +6,9 @@ public class MuzzleFlash : MonoBehaviour
 {
     [Range(0.1f, 1f)] [SerializeField] float timeBetweenFrames = 1f;
     [SerializeField] Texture2D[] frames;
-
-    private int frameIndex = 0;
     private MeshRenderer rendererMy;
     Coroutine firingCoroutine;
-    private bool CR_running = false;
+    private bool coroutineRunning = false;
 
     void Start()
     {
@@ -20,9 +18,9 @@ public class MuzzleFlash : MonoBehaviour
         rendererMy.enabled = false;
     }
 
-    public void ResetAnimation()
+    public void PlayAnimation()
     {
-        if(CR_running)
+        if(coroutineRunning)
         {
             StopCoroutine(firingCoroutine);
         }
@@ -40,7 +38,7 @@ public class MuzzleFlash : MonoBehaviour
 
     IEnumerator NextFrame()
     {
-        CR_running = true;
+        coroutineRunning = true;
 
         foreach (Texture frame in frames)
         {
@@ -48,6 +46,6 @@ public class MuzzleFlash : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenFrames);
         }
         rendererMy.enabled = false;
-        CR_running = false;
+        coroutineRunning = false;
     }
 }
